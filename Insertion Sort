@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main() {
+   int x[5] = {53,41,663,2,100};
+   int i,j,key;
+   for(i = 1;i<5 ; i++)
+   {
+       key = x[i];
+       for(j = i-1 ; j>=0 ;j--)
+       {
+           if(x[j]>key)
+           {
+               x[j+1] = x[j];
+           }
+           else break ;
+       }
+       x[j+1] = key;
+       printf("%d %d %d %d %d \n",x[0],x[1],x[2],x[3],x[4]);
+   }
+   
+}
